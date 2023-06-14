@@ -30,16 +30,16 @@ int main()
     escolha = escolha - 1;
 
     size_t tamanho_palavra = strlen(palavras[escolha][0]);
-    char revel_palavra[tamanho_palavra + 1];    // +1 para o caractere nulo de terminaC'C#o
+    char revel_palavra[tamanho_palavra + 1];    // +1 para o caractere nulo de terminacao
 
     for (size_t i = 0; i < tamanho_palavra; i++){
         revel_palavra[i] = '-';
     }
-    revel_palavra[tamanho_palavra] = '\0';    // Adiciona o caractere nulo de terminaC'C#o
+    revel_palavra[tamanho_palavra] = '\0';    // Adiciona o caractere nulo de terminacao
 
     while (erros != chances || venceu == 1){
         printf("\nA palavra tem %zu letras. %s\n", tamanho_palavra, revel_palavra);
-        printf("Voce tem %i chances de errar e direito a %i dicas.\n", chances, dicas);
+        printf("Voce tem %i chances de errar e direito a %i dicas.\n", chances-erros, dicas-(dica_cont-1));
         printf("Deseja chutar uma letra ou quer uma dica?\nPara Dica digite 1 e Para letra digite 2: ");
 
         int diletra;
@@ -60,7 +60,7 @@ int main()
             dica_cont++;
         }
         else if (diletra == 2){
-            printf("digite a letra: ");
+            printf("\ndigite a letra: ");
             scanf(" %c", &letra);
 
             int encontrou = 0;
