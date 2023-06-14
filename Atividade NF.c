@@ -18,7 +18,7 @@ int main()
     int erros = 0;
     int dica_cont = 1;
     char letra;
-    char tentativa_letras[100];
+    char tentativa_letras[11];
 
     printf("----------Bem Vindo a Forca----------");
     printf("\n\ntemos uma lista com 5 palavras digite um numero de 1 a 5 para selecionar a palavra\n");
@@ -83,7 +83,11 @@ int main()
         printf("\n");
         
         if(strcmp(palavras[escolha][0], revel_palavra) == 0){
-            printf("\n\nparabens voce venceu\n");
+            printf("\n\nParabens voce venceu!\n");
+            venceu = 1;
+            break;
+        }else if(erros == chances){
+            printf("\n\nQue pena, voce perdeu!\n");
             venceu = 1;
             break;
         }
