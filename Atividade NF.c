@@ -18,6 +18,7 @@ int main()
     int erros = 0;
     int dica_cont = 1;
     char letra;
+    char tentativa_letras[100];
 
     printf("----------Bem Vindo a Forca----------");
     printf("\n\ntemos uma lista com 5 palavras digite um numero de 1 a 5 para selecionar a palavra\n");
@@ -73,7 +74,11 @@ int main()
 
             if (!encontrou){
                 erros++;
+                printf("\nFoi mal, nao tem esta letra ");
+                strcat(tentativa_letras, &letra);
+                strcat(tentativa_letras,"-");
             }
+            printf("\nLetras chutadas: %s", tentativa_letras);
         }
         printf("\n");
         
