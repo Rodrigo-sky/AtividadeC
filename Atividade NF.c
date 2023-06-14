@@ -45,6 +45,11 @@ int main()
 
         int diletra;
         scanf("%i", &diletra);
+        
+        while (diletra != 1 || diletra != 2){
+            printf("escolha uma opção valida!");
+            scanf("%i", &diletra);
+        }
 
         if (dica_cont > dicas){
             printf("\n\nvoce nao tem mais dicas! Dicas anteriores:");
