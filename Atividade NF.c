@@ -18,7 +18,7 @@ int main()
     int erros = 0;
     int dica_cont = 1;
     char letra;
-    char tentativa_letras[11];
+    char tentativa_letras[20];
 
     printf("----------Bem Vindo a Forca----------");
     printf("\n\ntemos uma lista com 5 palavras digite um numero de 1 a 5 para selecionar a palavra\n");
